@@ -3,4 +3,23 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 20px;
+  flex-direction: column;
+}
+.MainProducts__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px; /* Espacio entre las columnas */
+  padding: 10px;
+}
+.Item {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.Image {
+  width: 300px !important;
+  height: 200px !important;
+  position: relative !important;
+  object-fit: cover;
 }
