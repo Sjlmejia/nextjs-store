@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import { Header } from "app/components/shared/Header";
 import { Footer } from "app/components/shared/Footer";
 import { ChackraProvider } from "app/providers/chacka-provider";
+import Hero from "app/components/home/Hero/Hero";
+import { Description } from "app/components/home/Description/Description";
 
 const inter = Inter({ subsets: ["latin"] });
 
