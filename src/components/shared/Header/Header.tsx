@@ -16,7 +16,6 @@ interface Props {
 const Links = [
   { name: 'Home', href: '/' },
   { name: 'Store', href: '/store' },
-  { name: 'Test', href: '/test' },
 ]
 
 const NavLink = (props:Props) => {

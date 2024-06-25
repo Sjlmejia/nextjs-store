@@ -1,8 +1,22 @@
+import { Link } from "@chakra-ui/react";
+import { getCollections } from "app/services/shopify/collections";
 
-function Layout({children}: {children: React.ReactNode}) {
+async function Layout({children}: {children: React.ReactNode}) {
+  const collections = await getCollections();
+  
   return (
     <main>
-      <nav>Navegación de las categorías</nav>
+      <nav>
+        {
+          collections.map((collection: any) => {
+            return (
+              <Link key={collection.id} href={`/store/${collection.handle}`}>
+                {collection.title}
+              </Link>
+            )
+          })
+        }
+      </nav>
       {children}
     </main>
   )
