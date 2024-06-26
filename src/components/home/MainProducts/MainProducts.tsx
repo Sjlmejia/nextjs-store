@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import styles from './MainProducts.module.css';
 import { Box } from '@chakra-ui/react';
+import { getMainProducts } from 'app/services/shopify/products';
 
 async function MainProducts() {
-  const response = await fetch('http://localhost:3000/api/');
-  const { products } = await response.json();
+  const products = await getMainProducts();
 
   return (
     <Box m={10} className={styles.MainProducts}>
